@@ -18,7 +18,7 @@ function newGame(){
      letter = new letterCon()
      chosenWord = randomWord.word
      chances = 5;
-    console.log("The random word which was generated : " + chosenWord)
+ 
   
     // Pushes underscores out for each in index in the word
     for(var i=0; i < chosenWord.length; i++){
@@ -84,7 +84,7 @@ askLetter();
         function gameStatus(){
      if(chosenWord == correctGuessesAndBlanks.join('')){
       
-      // functionality for inquirer to ask the user to begin a new game if they wish
+      // functionality for inquirer to ask the user to begin a new game if they wish which wasn't working
       
         //  var inquirer = require("inquirer");
 
@@ -110,14 +110,9 @@ askLetter();
         console.log("You've won\n")
         console.log("---------- BEGIN NEW GAME ---------- \n ")
 
-
-
-         
-         //console.log("---------- BEGIN NEW GAME ---------- \n ")
+        //console.log("---------- BEGIN NEW GAME ---------- \n ")
         
-        
-        
-     }
+    }
      else if(chosenWord != correctGuessesAndBlanks && chances == 0){
          console.log("Better luck next time\n")
          console.log("---------- BEGIN NEW GAME ---------- \n ")
