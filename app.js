@@ -1,4 +1,4 @@
-
+// Set our global variables
 
 var chances = 5;
 var words = ["jungleland" , "badlands" , "fire", "rosalita", "backstreets"]
@@ -11,7 +11,7 @@ var randomWord;
 var letter;
 var chosenWord;
 
-
+// Resets the varibles which are used in a new game
 function newGame(){
     correctGuessesAndBlanks = [];
      randomWord = new wordCon(words)
@@ -20,7 +20,7 @@ function newGame(){
      chances = 5;
     console.log("The random word which was generated : " + chosenWord)
   
-    
+    // Pushes underscores out for each in index in the word
     for(var i=0; i < chosenWord.length; i++){
         // if(chosenWord.indexOf(spaces)){
         //     correctGuessesAndBlanks.push("_")
@@ -83,9 +83,38 @@ askLetter();
 
         function gameStatus(){
      if(chosenWord == correctGuessesAndBlanks.join('')){
-         console.log("You've won\n")
-         console.log("---------- BEGIN NEW GAME ---------- \n ")
-         newGame();
+      
+      // functionality for inquirer to ask the user to begin a new game if they wish
+      
+        //  var inquirer = require("inquirer");
+
+        // Created a series of questions
+        // inquirer.prompt([
+         
+        //  {
+        //     type: "confirm",
+        //     name: "playAgain",
+        //     message: "Would you like to play again?"
+        //   },
+        
+        // ]).then(function(user) {
+        //     console.log(user.playAgain)
+        //    if(user.playAgain == true){
+        //     newGame();
+        //     console.log("---------- BEGIN NEW GAME ---------- \n ")
+
+        //    }
+        
+        // });
+        newGame();
+        console.log("You've won\n")
+        console.log("---------- BEGIN NEW GAME ---------- \n ")
+
+
+
+         
+         //console.log("---------- BEGIN NEW GAME ---------- \n ")
+        
         
         
      }
@@ -96,7 +125,6 @@ askLetter();
         
      }
  }
-
 
 
 
